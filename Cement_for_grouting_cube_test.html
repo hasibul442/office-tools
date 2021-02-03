@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css">
+
+  </head>
+<body>
+
+  <form>
+    <label><b>Fluidity(S) Initial fluidity: </b></label>
+    <input type="text" name="message" id="Fluidity(S)_Initial_fluidity">
+    <br>
+    <br>
+    <label><b>Fluidity(S) 30min Fluidity: </b></label>
+    <input type="text" name="message" id="Fluidity(S)_30min_Fluidity">
+    <br>
+    <br>
+    <label><b>Fluidity(S) 60min Fluidity: </b></label>
+    <input type="text" name="message" id="Fluidity(S)_60min_Fluidity">
+    <br>
+    <br>
+    <label><b>Bending strength (MPa) 3d: </b></label>
+    <input type="text" name="message" id="Bending_strength_(MPa)_3d">
+    <br>
+    <br>
+    <label><b>Bending strength (MPa) 7d: </b></label>
+    <input type="text" name="message" id="Bending_strength_(MPa)_7d">
+    <br>
+    <br>
+    <label><b>Bending strength (MPa) 28d: </b></label>
+    <input type="text" name="message" id="Bending_strength_(MPa)_28d">
+    <br>
+    <br>
+    <label><b>Compression strength (MPa) 3d: </b></label>
+    <input type="text" name="message" id="Compression_strength_(MPa)_3d">
+    <br>
+    <br>
+    <label><b>Compression strength (MPa) 7d: </b></label>
+    <input type="text" name="message" id="Compression_strength_(MPa)_7d">
+    <br>
+    <br>
+    <label><b>Compression strength (MPa) 28d: </b></label>
+    <input type="text" name="message" id="Compression_strength_(MPa)_28d">
+    <br>
+    <br>
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script language="JavaScript">
+    function showInput() {
+        var text1 = document.getElementById("Fluidity(S)_Initial_fluidity").value
+        var text2 = document.getElementById("Fluidity(S)_30min_Fluidity").value 
+        var text3 = document.getElementById("Fluidity(S)_60min_Fluidity").value 
+        var text4 = document.getElementById("Bending_strength_(MPa)_3d").value
+        var text5 = document.getElementById("Bending_strength_(MPa)_7d").value
+        var text6 = document.getElementById("Bending_strength_(MPa)_28d").value
+        var text7 = document.getElementById("Compression_strength_(MPa)_3d").value
+        var text8 = document.getElementById("Compression_strength_(MPa)_7d").value
+        var text9 = document.getElementById("Compression_strength_(MPa)_28d").value
+        document.getElementById('display').innerHTML = 
+                    'Fluidity(S) Initial fluidity-&nbsp;'+ text1 +
+                    ',&nbsp;Fluidity(S) 30min Fluidity-&nbsp;' +  text2
+                    +',&nbsp;Fluidity(S) 60min Fluidity-&nbsp;' +text3
+                    +',&nbsp;Bending strength (MPa) 3d-&nbsp;' +text4
+                    +',&nbsp;Bending strength (MPa) 7d-&nbsp;' +text5
+                    +',&nbsp;Bending strength (MPa) 28d-&nbsp;' +text6
+                    +',&nbsp;Compression strength (MPa) 3d-&nbsp;' +text7
+                    +',&nbsp;Compression strength (MPa) 7d-&nbsp;' +text8
+                    +',&nbsp;Compression strength (MPa) 28d-&nbsp;' +text9
+                    +',&nbsp;Result- Ok' 
+                    +'<br><br>'
+                    +
+                    '<table class="table table-bordered">'+
+                        '<tr>'+
+                            '<td>'+text1+'</td>'+
+                            '<td>'+text2+'</td>'+
+                            '<td>'+text3+'</td>'+
+                            '<td>'+text4+'</td>'+
+                            '<td>'+text5+'</td>'+
+                            '<td>'+text6+'</td>'+
+                            '<td>'+text7+'</td>'+
+                            '<td>'+text8+'</td>'+
+                            '<td>'+text9+'</td>'+
+                            '<td>'+'Ok'+'</td>'+
+                        '</tr>'+
+                    
+                    '</table>'
+                    ;
+                    
+    }
+  </script>
+</body>
+</html>

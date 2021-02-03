@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+  </head>
+<body>
+
+  <form>
+    
+    <label><b>Compressive strength: </b></label>
+    <input type="text" name="message" id="Compressive_strength1">
+    <input type="text" name="message" id="Compressive_strength2">
+    <input type="text" name="message" id="Compressive_strength3">
+    <br>
+    <br>
+    <label><b>Average value: </b></label>
+    <input type="text" name="message" id="Average_value">
+
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script language="JavaScript">
+    function showInput() {
+        
+        var text2 = document.getElementById("Compressive_strength1").value 
+        var text3 = document.getElementById("Compressive_strength2").value 
+        var text4 = document.getElementById("Compressive_strength3").value
+        var text5 = document.getElementById("Average_value").value
+       
+        document.getElementById('display').innerHTML = 
+                    
+                    '<table class="table table-bordered">'+
+                        '<tr>'+
+                            '<td>'+'Age(d)-28'
+                    +',&nbsp;Compressive strength(1,2,3)-&nbsp;'
+                    + text2
+                    +',&nbsp;'+ text3
+                    +',&nbsp;'+ text4
+                    +',&nbsp;Average value-&nbsp;'+ text5 +',&nbsp;Result Ok'
+                    +'</td>'+
+                            '<td>'+'28'+'</td>'+
+                            '<td>'+text2+',&nbsp;' +text3+',&nbsp;' +text4+'</td>'+
+                            '<td>'+text5+'</td>'+
+                            '<td>'+'Ok'+'</td>'+
+                        '</tr>'+
+                    
+                    '</table>'
+                    ;
+                    
+    }
+  </script>
+</body>
+</html>
